@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TechStore - Sua Loja de Tecnologia</title>
+    <link rel="stylesheet" href="estilo.css">
+</head>
+<body>
+    <header>
+        <div class="header-container">
+            <a href="index.html" class="logo">⚡ TechStore</a>
+            <nav>
+                <ul>
+                    <li><a href="index.html" class="active">Início</a></li>
+                    <li><a href="produtos.html">Produtos</a></li>
+                    <li><a href="contato.html">Contato</a></li>
+                </ul>
+            </nav>
+            <div class="cart-icon" onclick="toggleCart()">
+                🛒 <span id="cart-count">0</span>
+            </div>
+            <button class="menu-toggle" onclick="toggleMenu()" aria-label="Abrir menu">☰</button>
+        </div>
+    </header>
+
+    <section class="hero">
+        <div class="hero-content">
+            <h1>Bem-vindo à <span class="highlight">TechStore</span></h1>
+            <p>Os melhores produtos de tecnologia com os melhores preços. Monte seu setup dos sonhos!</p>
+            <a href="produtos.html" class="btn-hero">Ver Produtos</a>
+        </div>
+    </section>
+
+    <section class="section">
+        <h2 class="section-title">Categorias</h2>
+        <div class="categorias">
+            <a href="produtos.html?cat=perifericos" class="categoria-card">
+                <span class="cat-icon">🖥️</span>
+                <h3>Periféricos</h3>
+                <p>Teclados, mouses, headsets</p>
+            </a>
+            <a href="produtos.html?cat=hardware" class="categoria-card">
+                <span class="cat-icon">⚙️</span>
+                <h3>Hardware</h3>
+                <p>Processadores, placas, memórias</p>
+            </a>
+            <a href="produtos.html?cat=acessorios" class="categoria-card">
+                <span class="cat-icon">🎮</span>
+                <h3>Acessórios</h3>
+                <p>Mousepads, cadeiras, mesas</p>
+            </a>
+            <a href="produtos.html" class="categoria-card">
+                <span class="cat-icon">📦</span>
+                <h3>Todos</h3>
+                <p>Ver tudo disponível</p>
+            </a>
+        </div>
+    </section>
+
+    <section class="section">
+        <h2 class="section-title">Produtos em Destaque</h2>
+        <div class="cards" id="featured-products"></div>
+    </section>
+
+    <section class="newsletter">
+        <div class="newsletter-content">
+            <h2>Fique por dentro das novidades!</h2>
+            <p>Cadastre-se e receba ofertas exclusivas</p>
+            <form onsubmit="event.preventDefault(); alert('Inscrição realizada com sucesso!')">
+                <input type="email" placeholder="Seu melhor e-mail" required>
+                <button type="submit">Inscrever</button>
+            </form>
+        </div>
+    </section>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-col">
+                <h4>⚡ TechStore</h4>
+                <p>Sua loja de tecnologia confiável desde 2024.</p>
+            </div>
+            <div class="footer-col">
+                <h4>Links</h4>
+                <a href="index.html">Início</a>
+                <a href="produtos.html">Produtos</a>
+                <a href="contato.html">Contato</a>
+            </div>
+            <div class="footer-col">
+                <h4>Contato</h4>
+                <p>📞 (11) 99999-8888</p>
+                <p>✉️ contato@techstore.com</p>
+            </div>
+            <div class="footer-col">
+                <h4>Redes Sociais</h4>
+                <div class="social">
+                    <span>📘</span>
+                    <span>📸</span>
+                    <span>🐦</span>
+                    <span>▶️</span>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2024 TechStore - Todos os direitos reservados. Trabalho Acadêmico.</p>
+        </div>
+    </footer>
+
+    <div id="cart-modal" class="cart-modal">
+        <div class="cart-content">
+            <div class="cart-header">
+                <h2>Carrinho</h2>
+                <span class="cart-close" onclick="toggleCart()">&times;</span>
+            </div>
+            <div id="cart-items"></div>
+            <div class="cart-total">
+                <strong>Total:</strong> <span id="cart-total">R$ 0,00</span>
+            </div>
+            <button class="btn-clear" onclick="clearCart()">Limpar Carrinho</button>
+        </div>
+    </div>
+
+    <div id="toast" class="toast"></div>
+
+    <script src="script.js"></script>
+</body>
+</html>

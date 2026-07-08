@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Produtos - TechStore</title>
+    <link rel="stylesheet" href="estilo.css">
+</head>
+<body>
+    <header>
+        <div class="header-container">
+            <a href="index.html" class="logo">⚡ TechStore</a>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Início</a></li>
+                    <li><a href="produtos.html" class="active">Produtos</a></li>
+                    <li><a href="contato.html">Contato</a></li>
+                </ul>
+            </nav>
+            <div class="cart-icon" onclick="toggleCart()">
+                🛒 <span id="cart-count">0</span>
+            </div>
+            <button class="menu-toggle" onclick="toggleMenu()" aria-label="Abrir menu">☰</button>
+        </div>
+    </header>
+
+    <section class="page-banner">
+        <h1>Nossos Produtos</h1>
+        <p>Confira nossa linha completa de produtos</p>
+    </section>
+
+    <section class="section">
+        <div class="filter-bar">
+            <button class="filter-btn active" data-cat="todos">Todos</button>
+            <button class="filter-btn" data-cat="perifericos">Periféricos</button>
+            <button class="filter-btn" data-cat="hardware">Hardware</button>
+            <button class="filter-btn" data-cat="acessorios">Acessórios</button>
+        </div>
+        <div class="cards" id="all-products"></div>
+    </section>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-col">
+                <h4>⚡ TechStore</h4>
+                <p>Sua loja de tecnologia confiável desde 2024.</p>
+            </div>
+            <div class="footer-col">
+                <h4>Links</h4>
+                <a href="index.html">Início</a>
+                <a href="produtos.html">Produtos</a>
+                <a href="contato.html">Contato</a>
+            </div>
+            <div class="footer-col">
+                <h4>Contato</h4>
+                <p>📞 (11) 99999-8888</p>
+                <p>✉️ contato@techstore.com</p>
+            </div>
+            <div class="footer-col">
+                <h4>Redes Sociais</h4>
+                <div class="social">
+                    <span>📘</span>
+                    <span>📸</span>
+                    <span>🐦</span>
+                    <span>▶️</span>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2024 TechStore - Todos os direitos reservados. Trabalho Acadêmico.</p>
+        </div>
+    </footer>
+
+    <div id="cart-modal" class="cart-modal">
+        <div class="cart-content">
+            <div class="cart-header">
+                <h2>Carrinho</h2>
+                <span class="cart-close" onclick="toggleCart()">&times;</span>
+            </div>
+            <div id="cart-items"></div>
+            <div class="cart-total">
+                <strong>Total:</strong> <span id="cart-total">R$ 0,00</span>
+            </div>
+            <button class="btn-clear" onclick="clearCart()">Limpar Carrinho</button>
+        </div>
+    </div>
+
+    <div id="toast" class="toast"></div>
+
+    <script src="script.js"></script>
+</body>
+</html>
