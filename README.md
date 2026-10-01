@@ -1,31 +1,30 @@
 # TechStore
 
-Loja virtual acadêmica de tecnologia desenvolvida com HTML, CSS e JavaScript puro.
+Loja virtual acadêmica de tecnologia, desenvolvida com HTML, CSS e JavaScript puro.
 
-## Sobre o projeto
+## Sobre
 
-A TechStore é uma vitrine simples de produtos de tecnologia com navegação entre páginas, catálogo de produtos, carrinho de compras e formulário de contato.
+Vitrine simples de produtos de tecnologia, com navegação entre páginas, catálogo, carrinho de compras e formulário de contato.
 
 ## Funcionalidades
 
 - Página inicial com destaques e categorias
 - Lista de produtos com filtros por categoria
-- Carrinho de compras com armazenamento local
+- Carrinho de compras com armazenamento no `localStorage`
 - Formulário de contato com validação básica
 - Layout responsivo para desktop e mobile
 
 ## Como executar
 
-Abra o arquivo `index.html` em um navegador.
+Abra o `index.html` no navegador. Não há build nem servidor.
 
 ## Estrutura
 
-- `index.html`
-- `produtos.html`
-- `contato.html`
-- `estilo.css`
-- `script.js`
-
-## Nome sugerido para o repositório
-
-`techstore-loja-virtual`
+```text
+.
+├── index.html      # página inicial
+├── produtos.html   # catálogo com filtros
+├── contato.html    # formulário de contato
+├── estilo.css      # estilos
+└── script.js       # carrinho, filtros e validação
+```
